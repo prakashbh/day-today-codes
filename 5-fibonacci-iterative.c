@@ -1,18 +1,33 @@
 #include <stdio.h>
 
+int fibo(int n)
+{
+    int previous = 1;
+    int current = 1;
+    int next = 1;
+    int i;
+    for (i = 3; i <= n; i++)
+    {
+        next = current + previous;
+        previous = current;
+        current = next;
+    }
+    return next;
+}
+
+
 int main()
 {
-	int n = 10;
-	int i;
-	int fib[n];
-	fib[0] = 0;
-	fib[1] = 1;
+    int n;
+    int result;
+    printf("Enter the required nth number in fibonacci series: ");
+    scanf("%d", &n);
 
-	for(i=2; i<= n; i++)
-		fib[i] = fib[i-1]+fib[i-2];
-
-	for (i = 0; i < n; i++)
-		printf("Fib[%d] = [%d]\n",i, fib[i] );
+    if (n == 0)
+        result = 0;
+    else
+        result = fibo(n);
+    printf("The %d number in fibonacci series is %d\n", n, result);
 
     return 0;
 }
