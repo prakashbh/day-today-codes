@@ -41,20 +41,20 @@ int main()
     Union(5,2);
 
     int i;
-    # Result should be
-    # 0 1 1 3 3 1 1 7 3 3
+    // Result should be
+    // 0 1 1 3 3 1 1 7 3 3
     for(i = 0; i < n; i++)
         printf("%d\t", arr[i]);
 
     int status;
     status = Find(0, 7);
-    # Result should be
-    # 0
+    // Result should be
+    // 0
     printf("\n%d", status);
 
     status = Find(1,6);
-    # Result should be
-    # 1
+    // Result should be
+    // 1
     printf("\n%d", status);
 
     return 0;
