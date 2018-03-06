@@ -38,10 +38,14 @@ void permute(int a[], int n)
     int temp;
     for(i = 0; i < n; i++)
     {
+        // Remove the ith item
         temp = a[i];
         a[i] = a[n-1];
         a[n-1] = temp;
+        
         permute(a, n-1);
+        
+        // Restore it for the next round
         temp = a[i];
         a[i] = a[n-1];
         a[n-1] = temp;
